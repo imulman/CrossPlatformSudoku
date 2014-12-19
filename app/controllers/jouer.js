@@ -13,7 +13,11 @@ function verifValeur(e){
 	Ti.API.info(e.value == solution[x][y]);
 	// si ce qu'il a entré est bon, on verifie s'il n'a pas fini
 	if(e.value == solution[x][y] && verifPartieFinie()){
-		alert("Partie terminée. Felicitations");
+		message = "Partie terminée. Felicitations \n";
+		if(calculMeilleurScore() > args.parent.meilleurScore.text)
+			message = message + "Nouveau Meilleur ";
+		message = message + "Score = "+calculMeilleurScore();
+		alert(message);
 		Ti.App.meilleurScore = calculMeilleurScore();
 		args.parent.meilleurScore.text = Ti.App.meilleurScore; 
 		$.jouer.close();
