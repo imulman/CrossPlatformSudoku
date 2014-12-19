@@ -1,5 +1,7 @@
 <Alloy>
 	<Window class="container">
 		<Label id="label" onClick="doClick">Hello, World</Label>
+		<Button id="btnJouer" title="Jouer" onClick="jouer"></Button>
+		<Label id="meilleurScore"></Label>
 	</Window>
 </Alloy>

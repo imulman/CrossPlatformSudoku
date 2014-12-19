@@ -1,5 +1,6 @@
 ".container": {
-	backgroundColor:"white"
+	backgroundColor:"white",
+	layout:"vertical"
 }
 
 "Label": {
@@ -13,3 +14,9 @@
 		fontSize: 12
 	}
 }
+
+"#btnJouer": {
+	top: 20
+}
+
+"#meilleurScore":{}

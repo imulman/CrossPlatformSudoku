@@ -1,0 +1,10 @@
+<Alloy>
+	<Window class="container">
+		<Button id="retour" title="Retour" onClick="clicRetour"></Button>
+		
+		<!-- besoin de ces trois parametres pour chaque champ texte ou l'utilisateur doit agir
+		position doit aller de 0(x=0 et y=0) à 80(x=8 et y=8) -->
+		<TextField id="case0" position="0" onChange="verifValeur"></TextField>
+		<TextField id="case1" position="1" onChange="verifValeur"></TextField>
+	</Window>
+</Alloy>
