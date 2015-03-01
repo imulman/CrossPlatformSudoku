@@ -1,18 +1,18 @@
-function doClick(e) {
-    alert($.label.text);
-    console.log(Ti.App.myGlobalVar);
+function play(e) {
+	
+	var sudokuWindows = Alloy.createController("sudoku", {
+		parent:$
+	}).getView();
+	
+	if (Titanium.Platform.name == 'android') {
+			$.BottomHolder.visible = false; 
+			sudokuWindows.open();
+	} else {
+			$.BottomHolder.visible = false; 
+			sudokuWindows.backgroundImage = "background.jpeg";
+   			sudokuWindows.open();
+	}
 }
 
-function jouer(e) {
-    var jouer = Alloy.createController("jouer", {
-    	parent:$
-    });
-    jouer.getView().open();
-}
-
+$.index.backgroundImage = "background.jpeg";
 $.index.open();
-
-// variable globale, pas de persistence de ce cote la pour l'instant
-Ti.App.meilleurScore = 0;
-
-$.meilleurScore.text = Ti.App.meilleurScore;

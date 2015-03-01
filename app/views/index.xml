@@ -1,7 +1,22 @@
 <Alloy>
 	<Window class="container">
-		<Label id="label" onClick="doClick">Hello, World</Label>
-		<Button id="btnJouer" title="Jouer" onClick="jouer"></Button>
-		<Label id="meilleurScore"></Label>
+		<View id="ParentView">
+			
+			<View id="LogoHolder">
+			<ImageView id="Logo" image="logo.png"></ImageView>
+			</View>
+			
+			<View id="BottomHolder">
+				<View id="ButtonContainer">
+					<View class="buttonView" id="btnPlay" onClick="play">
+						<Label class="Button">Nouvelle partie</Label>
+					</View>
+					<View class="buttonView" id="btnScores">
+						<Label class="Button">Meilleurs Scores</Label>
+					</View>
+				</View>
+			</View>
+			
+		</View>
 	</Window>
 </Alloy>
